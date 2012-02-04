@@ -23,6 +23,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class SAngle extends Activity {
@@ -32,27 +35,45 @@ public class SAngle extends Activity {
 	EditText etTo, etFrom;
 	Map<String, String> googleUnits = new HashMap<String, String>();
 	private String result;
+	private Button BtnCalc;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
 
-		googleUnits.put("Fahrenheit", "F");
-		googleUnits.put("Celsius", "C");
-		googleUnits.put("Kelvin", "K");
+		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.cities_layout);
 
+		googleUnits.put("Radian", "radian");
+		googleUnits.put("Degrees", "degree");
+		googleUnits.put("Minutes", "minutes");
+		googleUnits.put("Seconds", "seconds");
+
+		final String cities[][] = new String[][] { new String[] {"Radian", "Degrees", "Minutes", "Seconds"} };
+
+		BtnCalc = (Button) findViewById(R.id.btnCalc);
 		etFrom = (EditText) findViewById(R.id.edittext_from);
 		etTo = (EditText) findViewById(R.id.edittext_to);
 
-		final String cities[][] = new String[][] { new String[] { "Fahrenheit",
-				"Celsius", "Kelvin" }, };
-
 		final WheelView city = (WheelView) findViewById(R.id.city);
-		city.setVisibleItems(cities[0].length);
-
 		final WheelView country = (WheelView) findViewById(R.id.country);
+
+		BtnCalc.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				String element1 = (String) googleUnits.get(cities[0][country
+						.getCurrentItem()]);
+				String element2 = (String) googleUnits.get(cities[0][city
+						.getCurrentItem()]);
+				System.out.println(country.getCurrentItem()
+						+ "selected item in else::" + city.getCurrentItem());
+				result = etFrom.getText().toString();
+				new GetData().execute(result + element1 + "=?" + element2);
+			}
+		});
+
+		city.setVisibleItems(cities[0].length);
 		updateCities(country, cities, 0);
 		updateCities(city, cities, 0);
 
@@ -134,10 +155,10 @@ public class SAngle extends Activity {
 			String result = "";
 			try {
 				HttpClient httpclient = new DefaultHttpClient();
-				HttpPost httppost = new HttpPost(
-						"http://www.google.com/ig/calculator?q=" + params[0]);
 				System.out.println("Result::"
 						+ "http://www.google.com/ig/calculator?q=" + params[0]);
+				HttpPost httppost = new HttpPost(
+						"http://www.google.com/ig/calculator?q=" + params[0]);
 				// httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 				HttpResponse response = httpclient.execute(httppost);
 				HttpEntity entity = response.getEntity();
