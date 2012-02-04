@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="hello">Hello World, ListViewWithImageActivity!</string>
+    <string name="app_name">Unit Converter</string>
+    <string name="szMenu_Preference">About App</string>
+    <string name="szMenu_About">About Company</string>
+      <string name="szMenu_share">Find Us</string>
+          <string name="szMenu_help">Help</string>
+</resources>

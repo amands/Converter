@@ -19,6 +19,9 @@
         <activity android:name="kankan.wheel.demo.WheelDemo" >
         </activity>
         
+        
+        <activity android:name=".CurrencyPreferences" />
+        
         <activity
             android:name="kankan.wheel.demo.SAngle"
             android:label="Angle" >
