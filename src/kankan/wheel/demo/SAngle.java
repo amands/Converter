@@ -31,7 +31,7 @@ public class SAngle extends Activity {
 	// int Selected = 1;
 	EditText etTo, etFrom;
 	Map<String, String> googleUnits = new HashMap<String, String>();
-	private float result;
+	private String result;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -104,8 +104,7 @@ public class SAngle extends Activity {
 						.getCurrentItem()]);
 				System.out.println(country.getCurrentItem()
 						+ "selected item in else::" + city.getCurrentItem());
-				result = Float.valueOf(etFrom.getText().toString())
-						.floatValue();
+				result = etFrom.getText().toString();
 				new GetData().execute(result + element1 + "=?" + element2);
 			}
 		});

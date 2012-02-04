@@ -23,6 +23,9 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class SCurrency extends Activity {
@@ -31,28 +34,80 @@ public class SCurrency extends Activity {
 	// int Selected = 1;
 	EditText etTo, etFrom;
 	Map<String, String> googleUnits = new HashMap<String, String>();
-	private float result;
+	private String result;
+	private Button BtnCalc;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
 
-		googleUnits.put("Fahrenheit", "F");
-		googleUnits.put("Celsius", "C");
-		googleUnits.put("Kelvin", "K");
+		super.onCreate(savedInstanceState);
 
 		setContentView(R.layout.cities_layout);
 
+		googleUnits.put("EUR", "Eur");
+		googleUnits.put("USD", "USD");
+		googleUnits.put("JPY", "JPY");
+		googleUnits.put("BGN", "BGN");
+		googleUnits.put("CZK", "CZK");
+		googleUnits.put("DKK", "DKK");
+		googleUnits.put("EEK", "EEK");
+		googleUnits.put("GBP", "GBP");
+		googleUnits.put("HUF", "HUF");
+		googleUnits.put("LTL", "LTL");
+		googleUnits.put("LVL", "LVL");
+		googleUnits.put("PLN", "PLN");
+		googleUnits.put("RON", "RON");
+		googleUnits.put("SEK", "SEK");
+		googleUnits.put("CHF", "CHF");
+		googleUnits.put("NOK", "NOK");
+		googleUnits.put("HRK", "HRK");
+		googleUnits.put("RUB", "RUB");
+		googleUnits.put("TRY", "TRY");
+		googleUnits.put("AUD", "AUD");
+		googleUnits.put("BRL", "BRL");
+		googleUnits.put("CAD", "CAD");
+		googleUnits.put("CNY", "CNY");
+		googleUnits.put("HKD", "HKD");
+		googleUnits.put("IDR", "IDR");
+		googleUnits.put("INR", "INR");
+		googleUnits.put("KRW", "KRW");
+		googleUnits.put("MXN", "MXN");
+		googleUnits.put("MYR", "MYR");
+		googleUnits.put("NZD", "NZD");
+		googleUnits.put("PHP", "PHP");
+		googleUnits.put("SGD", "SGD");
+		googleUnits.put("THB", "THB");
+		googleUnits.put("ZAR", "ZAR");
+
+		final String cities[][] = new String[][] { new String[] { "EUR", "USD",
+				"JPY", "BGN", "CZK", "DKK", "EEK", "GBP", "HUF", "LTL", "LVL",
+				"PLN", "RON", "SEK", "CHF", "NOK", "HRK", "RUB", "TRY", "AUD",
+				"BRL", "CAD", "CNY", "HKD", "IDR", "INR", "KRW", "MXN", "MYR",
+				"NZD", "PHP", "SGD", "THB", "ZAR" } };
+
+		BtnCalc = (Button) findViewById(R.id.btnCalc);
 		etFrom = (EditText) findViewById(R.id.edittext_from);
 		etTo = (EditText) findViewById(R.id.edittext_to);
 
-		final String cities[][] = new String[][] { new String[] { "Fahrenheit",
-				"Celsius", "Kelvin" }, };
-
 		final WheelView city = (WheelView) findViewById(R.id.city);
-		city.setVisibleItems(cities[0].length);
-
 		final WheelView country = (WheelView) findViewById(R.id.country);
+
+		BtnCalc.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				String element1 = (String) googleUnits.get(cities[0][country
+						.getCurrentItem()]);
+				String element2 = (String) googleUnits.get(cities[0][city
+						.getCurrentItem()]);
+				System.out.println(country.getCurrentItem()
+						+ "selected item in else::" + city.getCurrentItem());
+				result = etFrom.getText().toString();
+				new GetData().execute(result + element1 + "=?" + element2);
+			}
+		});
+
+		city.setVisibleItems(cities[0].length);
 		updateCities(country, cities, 0);
 		updateCities(city, cities, 0);
 
@@ -104,8 +159,7 @@ public class SCurrency extends Activity {
 						.getCurrentItem()]);
 				System.out.println(country.getCurrentItem()
 						+ "selected item in else::" + city.getCurrentItem());
-				result = Float.valueOf(etFrom.getText().toString())
-						.floatValue();
+				result = etFrom.getText().toString();
 				new GetData().execute(result + element1 + "=?" + element2);
 			}
 		});
@@ -135,10 +189,10 @@ public class SCurrency extends Activity {
 			String result = "";
 			try {
 				HttpClient httpclient = new DefaultHttpClient();
-				HttpPost httppost = new HttpPost(
-						"http://www.google.com/ig/calculator?q=" + params[0]);
 				System.out.println("Result::"
 						+ "http://www.google.com/ig/calculator?q=" + params[0]);
+				HttpPost httppost = new HttpPost(
+						"http://www.google.com/ig/calculator?q=" + params[0]);
 				// httppost.setEntity(new UrlEncodedFormEntity(nameValuePairs));
 				HttpResponse response = httpclient.execute(httppost);
 				HttpEntity entity = response.getEntity();
