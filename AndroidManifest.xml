@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+      package="kankan.wheel.demo"
+      android:versionCode="1"
+      android:versionName="1.0">
+<uses-permission android:name="android.permission.INTERNET"/>
+      
+    <application android:icon="@drawable/wheel" android:name=".Warehouse" android:label="WheelDemo">
+
+		<activity android:name="kankan.wheel.demo.WheelDemo">
+		    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+		</activity>
+		<activity android:name="kankan.wheel.demo.TimeActivity" android:label="Time">
+		    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+		</activity>
+       <activity android:name="kankan.wheel.demo.CitiesActivity" android:label="Cities">
+		    <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+		</activity>
+        <activity android:name="kankan.wheel.demo.SpeedActivity" android:label="Speed">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name="kankan.wheel.demo.SAngle" android:label="SAngle">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="kankan.wheel.demo.SCurrency" android:label="SCurrency">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="kankan.wheel.demo.SForce" android:label="SForce">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="kankan.wheel.demo.SLength" android:label="SLength">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="kankan.wheel.demo.SEnergy" android:label="SEnergy">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="kankan.wheel.demo.SMass" android:label="SMass">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        <activity android:name="kankan.wheel.demo.SPower" android:label="SPower">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+         <activity android:name="kankan.wheel.demo.STemprature" android:label="STemprature">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="kankan.wheel.WHEEL_SAMPLE"/>
+            </intent-filter>
+        </activity>
+        
+    </application>
+
+
+</manifest> 
