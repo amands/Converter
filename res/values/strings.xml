@@ -6,4 +6,5 @@
     <string name="szMenu_About">About Company</string>
       <string name="szMenu_share">Find Us</string>
           <string name="szMenu_help">Help</string>
+        <string name="szMenu_download">More</string>   
 </resources>

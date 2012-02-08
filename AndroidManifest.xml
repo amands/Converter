@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="kankan.wheel.demo"
+    package="slinfy.android.unitconverter"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -9,21 +9,19 @@
     <application
         android:icon="@drawable/c_icon"
         android:label="Unit Converter" >
-        <activity android:name="kankan.wheel.demo.SplashScreen" >
+        <activity android:name="slinfy.android.unitconverter.Splashtest" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="kankan.wheel.demo.WheelDemo" >
+        <activity android:name="slinfy.android.unitconverter.WheelDemo" >
         </activity>
-        
-        
         <activity android:name=".CurrencyPreferences" />
-        
+        <activity android:name=".AboutSlinfy"></activity>
         <activity
-            android:name="kankan.wheel.demo.SAngle"
+            android:name="slinfy.android.unitconverter.SAngle"
             android:label="Angle" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -32,7 +30,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="kankan.wheel.demo.SArea"
+            android:name="slinfy.android.unitconverter.SArea"
             android:label="Area" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -41,7 +39,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="kankan.wheel.demo.SCurrency"
+            android:name="slinfy.android.unitconverter.SCurrency"
             android:label="Currency" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -50,16 +48,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="kankan.wheel.demo.SForce"
-            android:label="Force" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="kankan.wheel.WHEEL_SAMPLE" />
-            </intent-filter>
-        </activity>
-        <activity
-            android:name="kankan.wheel.demo.SLength"
+            android:name="slinfy.android.unitconverter.SLength"
             android:label="Length" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -68,7 +57,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="kankan.wheel.demo.SEnergy"
+            android:name="slinfy.android.unitconverter.SEnergy"
             android:label="Energy" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -77,7 +66,25 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="kankan.wheel.demo.SMass"
+            android:name="slinfy.android.unitconverter.SForce"
+            android:label="Force" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="kankan.wheel.WHEEL_SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="slinfy.android.unitconverter.SInformation"
+            android:label="Information" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="kankan.wheel.WHEEL_SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="slinfy.android.unitconverter.SMass"
             android:label="Mass" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -86,7 +93,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="kankan.wheel.demo.SPower"
+            android:name="slinfy.android.unitconverter.SPower"
             android:label="Power" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -113,8 +120,26 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".STemperature"
+            android:name="slinfy.android.unitconverter.STemperature"
             android:label="Temperature" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="kankan.wheel.WHEEL_SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="slinfy.android.unitconverter.STime"
+            android:label="Time" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="kankan.wheel.WHEEL_SAMPLE" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="slinfy.android.unitconverter.SVolume"
+            android:label="Volume" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

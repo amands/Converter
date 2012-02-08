@@ -22,7 +22,9 @@ package kankan.wheel.widget;
 import java.util.LinkedList;
 import java.util.List;
 
-import kankan.wheel.demo.R;
+import slinfy.android.unitconverter.R;
+
+
 import kankan.wheel.widget.adapters.WheelViewAdapter;
 import android.content.Context;
 import android.database.DataSetObserver;
