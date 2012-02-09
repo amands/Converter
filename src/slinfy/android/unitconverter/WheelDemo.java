@@ -78,7 +78,7 @@ public class WheelDemo extends ListActivity {
 		case ABOUT_DOWNLOAD:
 			try {
 				// Start the activity
-				String url = "http://www.yahoo.com";
+				String url = "http://www.slinfy.com";
 				Intent i = new Intent(Intent.ACTION_VIEW);
 				Uri u = Uri.parse(url);
 				i.setData(u);

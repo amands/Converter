@@ -2,7 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/background1"
     android:orientation="vertical" >
 
     <TextView
@@ -11,8 +11,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="4dp"
         android:text="Unit/Currency Converter"
-        android:textSize="20sp" 
-        android:textColor="#322e01"/>
+        android:textColor="#322e01"
+        android:textSize="20sp" />
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -66,7 +66,6 @@
             android:layout_weight="1"
             android:editable="false"
             android:singleLine="true" />
-
     </LinearLayout>
 
     <Button
@@ -75,6 +74,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="10dp"
-        android:background="@drawable/calculate" />
+        android:text="Calculate"
+        android:textStyle="italic"/>
+    <!-- android:background="@drawable/calculate_1" / -->
 
 </LinearLayout>

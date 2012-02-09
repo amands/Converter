@@ -63,14 +63,14 @@ public class Splashtest extends Activity {
 				
 				try {
                     // Start the activity
-					String url = "http://www.yahoo.com";
+					String url = "http://www.slinfy.com";
 					Intent i = new Intent(Intent.ACTION_VIEW);
 					Uri u = Uri.parse(url);
 					i.setData(u);
                     startActivity(i);
                   } catch (Exception e) {
                     // Raise on activity not found
-                    Toast toast = Toast.makeText(sPlashScreen, "Browser not found.", Toast.LENGTH_SHORT);
+                    Toast.makeText(sPlashScreen, "Browser not found.", Toast.LENGTH_SHORT).show();
                   }
                 } 
 		});
@@ -99,7 +99,7 @@ public class Splashtest extends Activity {
                     startActivity(i);
                   } catch (Exception e) {
                     // Raise on activity not found
-                    Toast toast = Toast.makeText(sPlashScreen, "Browser not found.", Toast.LENGTH_SHORT);
+                    Toast.makeText(sPlashScreen, "Browser not found.", Toast.LENGTH_SHORT).show();
                   }
 			}
 		});

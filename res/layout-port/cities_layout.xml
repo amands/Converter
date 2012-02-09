@@ -2,17 +2,17 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:background="@drawable/bg"
+    android:background="@drawable/background1"
     android:orientation="vertical" >
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="14dp"
         android:text="Unit/Currency Converter "
-        android:textSize="20sp" 
-        android:textColor="#322e01"/>
+        android:textColor="#322e01"
+        android:textSize="20sp" />
 
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
@@ -73,7 +73,9 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="18dp"
-        android:background="@drawable/calculate_1" />
+        android:layout_marginTop="8dp"
+        android:text="Calculate"
+        android:textStyle="italic" />
+        <!-- android:background="@drawable/calculate_1" /-->
 
 </LinearLayout>

@@ -29,7 +29,6 @@ public class AboutDialog extends Dialog implements OnClickListener {
 	private static final String str_about[] = {
 			"A dream which came into existence only one year ago; being nurtured by a team of experienced and sensitive people",
 			"Solitaire Infosys Inc. is already leading the race of its competitors.",
-
 	};
 
 	public AboutDialog(Context context) {

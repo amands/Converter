@@ -9,7 +9,7 @@
     <application
         android:icon="@drawable/c_icon"
         android:label="Unit Converter" >
-        <activity android:name="slinfy.android.unitconverter.Splashtest" >
+        <activity android:name="slinfy.android.unitconverter.Splashtest" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
