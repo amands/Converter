@@ -139,7 +139,7 @@ public class SInformation extends Activity {
 	private void updateCities(WheelView city, String cities[][], int index) {
 		ArrayWheelAdapter<String> adapter = new ArrayWheelAdapter<String>(this,
 				cities[index]);
-		adapter.setTextSize(12);
+		adapter.setTextSize(15);
 		city.setViewAdapter(adapter);
 		city.setCurrentItem(cities[index].length / 2);
 	}
